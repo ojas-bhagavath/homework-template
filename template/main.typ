@@ -14,7 +14,9 @@
 
 #set text(font: "New Computer Modern")
 #set enum(numbering: "(a)")
-
+#let qed = [#align(right)[$qed$]]
 #prob()[
 
 ]
+
+#qed

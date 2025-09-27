@@ -32,11 +32,13 @@
   align(center + horizon)[
     #strong(text(size: 24pt)[#title])
 
-    #strong(text(size: 18pt)[Author: #author])
+    #strong(text(size: 18pt)[#author])
 
     #text(size: 18pt)[Due: #due]
 
     #text(size: 18pt)[Course: #course-code #course-name]
+
+    #text(size: 18pt)[Semester: Fall 2025]
 
     #text(size: 18pt)[Instructor: #instructor]
   ]
