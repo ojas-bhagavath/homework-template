@@ -2,15 +2,19 @@
 
 #let prob_count = counter("problem")
 
-#let prob(color: blue, ..body) = {
-  pagebreak(weak:true)
-  [== Problem #prob_count.step() #context {prob_count.display()}]
+#let prob(number: none, color: blue, ..body) = {
+  pagebreak(weak: true)
+  if number != none {
+    [== Problem #number]
+  } else {
+    [== Problem #prob_count.step() #context { prob_count.display() }]
+  }
   showybox(
     frame: (
       border-color: color.darken(10%),
-      body-color: color.lighten(90%)
+      body-color: color.lighten(90%),
     ),
-    ..body
+    ..body,
   )
 }
 
@@ -32,13 +36,11 @@
   align(center + horizon)[
     #strong(text(size: 24pt)[#title])
 
-    #strong(text(size: 18pt)[#author])
+    #strong(text(size: 18pt)[Author: #author])
 
     #text(size: 18pt)[Due: #due]
 
     #text(size: 18pt)[Course: #course-code #course-name]
-
-    #text(size: 18pt)[Semester: Fall 2025]
 
     #text(size: 18pt)[Instructor: #instructor]
   ]
@@ -47,8 +49,11 @@
       #title #h(1fr) #author
     ],
     footer: [
-      #align(right)[#context counter(page).display() of #context counter(page).final().first()]
+      #align(
+        right,
+      )[#context counter(page).display() of #context counter(page).final().first()]
     ],
   )
   body
 }
+
