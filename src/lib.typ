@@ -42,6 +42,8 @@
 
     #text(size: 18pt)[Course: #course-code #course-name]
 
+    #text(size: 18pt)[Semester: #semester]
+
     #text(size: 18pt)[Instructor: #instructor]
   ]
   set page(
