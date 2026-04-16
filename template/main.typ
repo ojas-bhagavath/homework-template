@@ -1,5 +1,7 @@
 #import "@local/homework-template:0.1.0": *
 
+#set text(font: "New Computer Modern")
+
 #show: homework.with(
   title: "",
   author: "",
@@ -11,8 +13,6 @@
   due: "",
   paper-size: "us-letter",
 )
-
-#set text(font: "New Computer Modern")
 #set enum(numbering: "(a)")
 #let qed = [#align(right)[$qed$]]
 #prob()[
