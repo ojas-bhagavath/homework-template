@@ -3,7 +3,7 @@
 #let prob_count = counter("problem")
 
 #let prob(number: none, color: blue, ..body) = {
-  // pagebreak(weak: true)
+  pagebreak(weak: true)
   if number != none {
     [== Problem #number]
   } else {
